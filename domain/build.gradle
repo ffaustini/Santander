@@ -1,0 +1,33 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+dependencies {
+
+    // Kotlin Std
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // Koin
+    implementation "io.insert-koin:koin-core:$koin_version"
+
+    // Tests
+    // junit
+    testImplementation 'junit:junit:4.+'
+    // coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    // mockito
+    testImplementation "org.mockito.kotlin:mockito-kotlin:$mockito_version"
+    // hamcrest
+    testImplementation "org.hamcrest:hamcrest:$hamcrest_version"
+    // Koin
+    testImplementation "io.insert-koin:koin-test:$koin_version"
+    testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
+
+}
